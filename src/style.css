@@ -262,6 +262,21 @@ a:hover {
   float: left;
 }
 
+.bnr-wrap {
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  left: 30px;
+}
+
+.bnr-wrap img {
+  margin-right: 14px;
+}
+
+.bnr-wrap img:hover {
+  opacity: 0.8;
+}
+
 @media screen and (max-width: 640px), screen and (orientation: landscape) and (max-width: 738px) {
   .gnavi {
     margin-top: 10px;
@@ -286,6 +301,17 @@ a:hover {
 
   .mobile {
     display: none;
+  }
+
+  .bnr-wrap {
+    margin-bottom: 20px;
+    text-align: center;
+    left: 0;
+  }
+
+  .bnr-wrap img {
+    width: 80%;
+    margin-bottom: 10px;
   }
 }
 /*==========================================================================================
@@ -407,8 +433,7 @@ address {
   position: absolute;
   top: 335px;
   left: 320px;
-  opacity: 0.99;
-  background: #f8e99b;
+  background: rgba(248, 233, 155, 0.95);
   border-radius: 20px;
   padding-bottom: 10px;
   /* box-shadow */
@@ -457,6 +482,12 @@ address {
   margin-left: 10px;
 }
 
+.contents .announcement {
+  padding: 10px 0;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
 .contents .exp {
   margin-top: 0px;
   display: none;
@@ -473,6 +504,8 @@ address {
   float: right;
   cursor: pointer;
 }
+
+
 
 @media screen and (max-width: 640px), screen and (orientation: landscape) and (max-width: 738px) {
   .contents {
@@ -522,6 +555,10 @@ address {
   .contents .switch_box {
     display: none;
   }
+
+  .contents .main_image .announcement {
+    text-align: left;
+  }
 }
 /*==========================================================================================
 
@@ -567,7 +604,7 @@ address {
   }
 
   .slides img {
-    height: auto;
+    height: auto;http://localhost:3000/images/main_image2.png
   }
 }
 /*==========================================================================================
@@ -624,6 +661,10 @@ address {
   float: right;
   margin-top: 20px;
   margin-right: 60px;
+}
+
+.contents .c_instractor .hideki_photo img {
+  border-radius: 12px;
 }
 
 .contents .c_instractor .hideki_prof dt {

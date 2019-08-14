@@ -5,7 +5,7 @@ $(function() {
 	var num;
 	var fw = $(".floatWindow");
 
-	$('.contents').css("opacity","0").animate({'opacity':'0.95'},1000);		// ページを開いた後に#contentsと#floatWindowをフェードインさせる
+	$('.contents').css("opacity","0").animate({'opacity':'1'},1000);		// ページを開いた後に#contentsと#floatWindowをフェードインさせる
 	$(".floatWindow").css("opacity","0").animate({'opacity':'1'},1200);
 
 	switch(here){														//switch文で現在のフォルダ名に応じて変数numに数を代入する。
@@ -83,6 +83,7 @@ $(function() {
 
 
 	$("a.close, fw").live('click',function(){					//✕ボタンを押した時に練習予定を消す処理
+		$('.floatWindow').css({height: '36px'});
 		fwdd.fadeOut("fast");
 		fwda.attr("class", "open");
 		fwdi.attr("src", "/images/switch_on.png");
@@ -93,6 +94,7 @@ $(function() {
 	});
 
 	$("a.open, fw").live('click',function(){					//◎ボタンを押した時に練習予定を開ける処理
+		$('.floatWindow').css({height: 'auto'});
 		fwdd.fadeIn("fast");
 		fwda.attr("class", "close");
 		fwdi.attr("src", "/images/switch.png");
@@ -180,20 +182,4 @@ $(function() {
 			$(this).attr('class','switch');
 			$('.exp').css("display","none");
 	});
-});
-
-
-$(function() {
-	if(!(navigator.userAgent.match(/(iPhone|Android)/))){
-		var gray = $("#grayLayer");
-		gray.height($("body").height());
-		$(".youtube-position").height(window.innerHeight);
-		gray.show();
-
-		gray.on("click", function() {
-			gray.fadeOut(function(){
-				gray.remove();
-			});
-		})
-	}
 });
