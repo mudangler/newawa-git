@@ -704,6 +704,15 @@ address {
   margin-bottom: 0;
 }
 
+.contents .switch_box {
+  text-align: right;
+}
+
+.contents .switch-txt {
+  display: inline-block;
+  margin: 3px 10px 0;
+}
+
 @media screen and (max-width: 640px), screen and (orientation: landscape) and (max-width: 738px) {
   .contents .c_instractor {
     padding-right: 15px;
